@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small global tweaks that are easier to write as plain CSS than as
+   Tailwind utility soup. Keep this file short and purposeful. */
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* The zig-zag "torn receipt paper" edge, used at the bottom of the
+   result card. This is the app's signature visual detail. */
+.torn-edge {
+  -webkit-mask-image: linear-gradient(#000 0 0),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 7.07px,
+      #000 7.07px 14.14px
+    );
+  -webkit-mask-size: 100% calc(100% - 10px), 20px 14.14px;
+  -webkit-mask-position: top left, bottom left;
+  -webkit-mask-repeat: no-repeat, repeat-x;
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(#000 0 0),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 7.07px,
+      #000 7.07px 14.14px
+    );
+  mask-size: 100% calc(100% - 10px), 20px 14.14px;
+  mask-position: top left, bottom left;
+  mask-repeat: no-repeat, repeat-x;
+  mask-composite: intersect;
+}
+
+/* Subtle scan-line texture on the receipt card, evoking thermal paper. */
+.paper-texture {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(31, 36, 48, 0.015) 0px,
+    rgba(31, 36, 48, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
