@@ -1,3 +1,4 @@
+# Receipt-Extractor
 # 🧾 Receipt Extractor
 
 A full-stack web application that extracts **vendor name, date, and total
@@ -265,3 +266,4 @@ No Docker is used — everything runs directly with Python and Node.js.
 - Try to keep the receipt flat and fully within the frame.
 - Very faded thermal-paper receipts may reduce OCR accuracy — this is a
   limitation of OCR technology in general, not specific to this app.
+
